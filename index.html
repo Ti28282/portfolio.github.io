@@ -1,38 +1,61 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MyPortfolio</title>
-    <link rel="icon" type="image/x-icon" href="./favicon-B8xUyoFv.ico">
-    <style>
-      html, body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        background: #0f0f0f;
-        color: #fff;
-      }
-      #root {
-        min-height: 100vh;
-        background: #0f0f0f;
-      }
-      #boot {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #0f0f0f;
-      }
-    </style>
-  </head>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>MyPortfolio</title>
+      <link rel="icon" type="image/x-icon" href="./favicon-B8xUyoFv.ico">
+        <style>
+          html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: #0f0f0f;
+            color: #ffffff;
+          }
 
-  <body>
-    <div id="root">
-      <div id="boot">Loading…</div>
-    </div>
+          #root {
+            min-height: 100vh;
+            background: #0f0f0f;
+          }
+          #boot {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #0f0f0f;
+            z-index: 9999;
+            transition: opacity 0.4s ease;
+          }
 
-    <script type="module" src="./index-BxeFY1Wu.js"></script>
-    <link rel="stylesheet" href="./index-BmFLtMBa.css" />
-  </body>
-</html>
+          #boot.hidden {
+            opacity: 0;
+            pointer-events: none;
+          }
+
+          .spinner {
+            width: 42px;
+            height: 42px;
+            border: 3px solid rgba(255,255,255,.2);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+          }
+
+          @keyframes spin {
+            to { transform: rotate(360deg); }
+          }
+      </style>
+      <script type="module" crossorigin src="./index-Dt_jDAhE.js"></script>
+      <link rel="stylesheet" crossorigin href="./index-BmFLtMBa.css">
+    </head>
+
+    <body>
+      <div id="boot">
+        <div class="spinner"></div>
+      </div>
+      <div id="root"></div>
+    </body>
+  </html>
+  
