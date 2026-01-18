@@ -1,29 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyPortfolio</title>
 
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>MyPortfolio</title>
-      <link rel="icon" type="image/x-icon" href="./favicon-B8xUyoFv.ico">
-       <style>
-          html, body {
-            margin: 0;
-            padding: 0;
-            background-color: #0f0f0f;
-            color: #ffffff;
-            height: 100%;
-          }
-          #root {
-            min-height: 100%;
-          }
-        </style>
-      <script type="module" crossorigin src="./index-BxeFY1Wu.js"></script>
-      <link rel="stylesheet" crossorigin href="./index-BmFLtMBa.css">
-    </head>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: #0f0f0f;
+        color: #fff;
+      }
+      #root {
+        min-height: 100vh;
+        background: #0f0f0f;
+      }
+      #boot {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #0f0f0f;
+      }
+    </style>
+  </head>
 
-    <body>
-      <div id="root"></div>
-    </body>
-  </html>
-  
+  <body>
+    <div id="root">
+      <div id="boot">Loading…</div>
+    </div>
+
+    <script type="module" src="./index-BxeFY1Wu.js"></script>
+    <link rel="stylesheet" href="./index-BmFLtMBa.css" />
+  </body>
+</html>
